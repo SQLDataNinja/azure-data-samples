@@ -4,6 +4,7 @@
 * text=auto
 *.html linguist-detectable=false
 *.python linguist-detectable=true
+*.py linguist-language=Python
 
 ###############################################################################
 # Set default behavior for command prompt diff.
