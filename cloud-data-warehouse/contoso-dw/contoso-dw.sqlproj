@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{6ec51781-24ae-4e5c-a165-82cfd80b72b7}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -22,6 +22,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -56,5 +57,18 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Security" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="ctrl" />
+    <Folder Include="ext" />
+    <Folder Include="src" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Security\Schemas\ctrl.sql" />
+    <Build Include="Security\Schemas\src.sql" />
+    <Build Include="Security\Schemas\ext.sql" />
+    <Build Include="ctrl\ctrl.data_pipeline_run.sql" />
+    <Build Include="ctrl\ctrl.data_pipeline_process.sql" />
+    <Build Include="ctrl\ctrl.data_pipeline_log.sql" />
   </ItemGroup>
 </Project>
