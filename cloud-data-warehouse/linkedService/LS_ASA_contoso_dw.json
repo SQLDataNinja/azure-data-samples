@@ -1,0 +1,17 @@
+{
+	"name": "LS_ASA_contoso_dw",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AKV_jejohn_kv",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "contoso-dw-cxn-kv"
+			}
+		}
+	}
+}
