@@ -1,0 +1,6 @@
+{
+	"name": "SHIR-LocalHomeSvr",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
