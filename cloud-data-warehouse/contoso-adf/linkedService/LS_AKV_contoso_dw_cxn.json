@@ -1,0 +1,10 @@
+{
+	"name": "LS_AKV_contoso_dw_cxn",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://jejohn-kv.vault.azure.net/"
+		}
+	}
+}
